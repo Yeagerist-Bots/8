@@ -93,7 +93,7 @@ async def startvideo(client, m: Message):
                     await asyncio.sleep(2)
                 await call_py.join_group_call(
                     chat_id,
-                    InputStream(
+InputStream(
             InputAudioStream(
                 audio_file,
                 AudioParameters(
@@ -108,6 +108,7 @@ async def startvideo(client, m: Message):
                     frame_rate=24,
                 ),
             ),
+        ),
                     stream_type=StreamType().local_stream,
                 ))
                 await msg.edit (
