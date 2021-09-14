@@ -108,7 +108,6 @@ async def startvideo(client, m: Message):
                     frame_rate=24,
                 ),
             ),
-        ),
                     stream_type=StreamType().local_stream,
                 ))
                 await msg.edit (
