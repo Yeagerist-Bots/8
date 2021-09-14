@@ -36,6 +36,7 @@ async def chstream(client, m: Message):
             await m.reply("`Reply to some Video File or YT Link!`")
         else:
             livelink = m.text.split(None, 1)[1]
+            chat_id = m.chat.id
             process = raw_converter(livelink, f'audio{chat_id}.raw', f'video{chat_id}.raw')
             FFMPEG_PROCESSES[chat_id] = process
             msg = await m.reply("`Starting Video Stream...`")
@@ -72,7 +73,7 @@ async def chstream(client, m: Message):
     elif replied.video or replied.document:
         msg = await m.reply("`Downloading...`")
         video = await client.download_media(m.reply_to_message)
-        chat_id = CHANNEL
+        chat_id = m.chat.id
         await msg.edit("`Processing...`")
         os.system(f"ffmpeg -i '{video}' -f s16le -ac 1 -ar 48000 'audio{chat_id}.raw' -y -f rawvideo -r 20 -pix_fmt yuv420p -vf scale=640:360 'video{chat_id}.raw' -y")
         try:
