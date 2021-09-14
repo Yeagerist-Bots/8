@@ -8,6 +8,7 @@ from pytgcalls.types import Update
 from pytgcalls.types.input_stream import AudioParameters
 from pytgcalls.types.input_stream import InputAudioStream
 from pytgcalls.types.input_stream import InputVideoStream
+from pytgcalls.types.input_stream import InputStream
 from pytgcalls.types.input_stream import VideoParameters
 
 from pyrogram import Client, filters
