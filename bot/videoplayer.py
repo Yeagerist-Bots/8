@@ -91,7 +91,7 @@ async def startvideo(client, m: Message):
                 while not os.path.exists(audio_file) or \
                         not os.path.exists(video_file):
                     await asyncio.sleep(2)
-                  await call_py.join_group_call(
+                await call_py.join_group_call(
                     chat_id,
                     InputStream(
                         InputAudioStream(
