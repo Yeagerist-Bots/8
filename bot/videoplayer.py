@@ -103,9 +103,9 @@ InputStream(
             InputVideoStream(
                 video_file,
                 VideoParameters(
-                    width=640,
-                    height=360,
-                    frame_rate=24,
+                    width=854,
+                    height=480,
+                    frame_rate=20,
                 ),
             ),
         ),
@@ -145,7 +145,7 @@ InputStream(
                 VideoParameters(
                     width=640,
                     height=360,
-                    frame_rate=24,
+                    frame_rate=20,
                 ),
             ),
         ),
