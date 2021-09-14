@@ -8,7 +8,6 @@ from pytgcalls.types import Update
 from pytgcalls.types.input_stream import AudioParameters
 from pytgcalls.types.input_stream import InputAudioStream
 from pytgcalls.types.input_stream import InputVideoStream
-from pytgcalls.types.input_stream import InputStream
 from pytgcalls.types.input_stream import VideoParameters
 
 from pyrogram import Client, filters
@@ -93,8 +92,8 @@ async def startvideo(client, m: Message):
                     await asyncio.sleep(2)
                 await call_py.join_group_call(
                     chat_id,
-                     InputStream(
-                        InputAudioStream(
+                    InputStream(
+                       InputAudioStream(
                         audio_file,
                         AudioParameters(
                             bitrate=48000,
@@ -110,7 +109,7 @@ async def startvideo(client, m: Message):
                     ),
                     stream_type=StreamType().local_stream,
                 )
-                await m.edit(
+                await msg.edit(
                     "💡 **Video streaming started!**\n"
                     f"**Currently Playing**: {title}\n"
                     "\n» **join to video chat on the top to watch the video.**")
@@ -133,13 +132,13 @@ async def startvideo(client, m: Message):
             await call_py.join_group_call(
                 chat_id,
                 InputStream(
-                    InputAudioStream(
+                   InputAudioStream(
                     audio_file,
                     AudioParameters(
                         bitrate=48000,
                     ),
                 ),
-                    InputVideoStream(
+                InputVideoStream(
                     video_file,
                     VideoParameters(
                         width=640,
@@ -149,7 +148,7 @@ async def startvideo(client, m: Message):
                 ),
                 stream_type=StreamType().local_stream,
             )
-            await m.edit("💡 **Video streaming started!**\n\n» **join to video chat on the top to watch the video.**")
+            await msg.edit("💡 **Video streaming started!**\n\n» **join to video chat on the top to watch the video.**")
         except Exception as e:
             await msg.edit(f"🚫 **Error** | `{e}`")
             await idle()
