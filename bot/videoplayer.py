@@ -110,7 +110,7 @@ async def startvideo(client, m: Message):
                     ),
                     stream_type=StreamType().local_stream,
                 )
-                await msg.edit(
+                 await msg.edit(
                     "💡 **Video streaming started!**\n"
                     f"**Currently Playing**: {title}\n"
                     "\n» **join to video chat on the top to watch the video.**")
