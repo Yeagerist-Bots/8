@@ -94,20 +94,21 @@ async def startvideo(client, m: Message):
                 await call_py.join_group_call(
                     chat_id,
                     InputStream(
-                        InputAudioStream(
-                        audio_file,
-                        AudioParameters(
-                            bitrate=48000,
-                        ),
-                    ),
-                    InputVideoStream(
-                        video_file,
-                        VideoParameters(
-                            width=854,
-                            height=480,
-                            frame_rate=20,
-                        ),
-                    ),
+            InputAudioStream(
+                audio_file,
+                AudioParameters(
+                    bitrate=48000,
+                ),
+            ),
+            InputVideoStream(
+                video_file,
+                VideoParameters(
+                    width=640,
+                    height=360,
+                    frame_rate=24,
+                ),
+            ),
+        ),
                     stream_type=StreamType().local_stream,
                 ))
                 await msg.edit (
