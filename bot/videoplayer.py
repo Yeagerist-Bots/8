@@ -138,7 +138,8 @@ async def startvideo(client, m: Message):
                         bitrate=48000,
                     ),
                 ),
-                InputVideoStream(
+                InputStream(
+                    InputAudioStream(
                     video_file,
                     VideoParameters(
                         width=640,
