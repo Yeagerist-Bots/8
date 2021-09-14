@@ -106,7 +106,7 @@ async def startvideo(client, m: Message):
                             width=854,
                             height=480,
                             frame_rate=20,
-                        ),
+                        ) ),
                     ),
                     stream_type=StreamType().local_stream,
                 )
