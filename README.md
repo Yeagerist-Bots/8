@@ -14,7 +14,7 @@ A Advanced Anime Theme VC Video Player created for playing vidio in the voice ch
 - /stop  : Stop the stream
 - /start :Start the bot
 - /help  :To Help Youhhhhhhh
-- /ly   : To Get lyrics Of Song
+- /ly   : To Get lyrics Of jjjjjjjjjjjjjjjjjjjjjjjjjj
 - /song : To Get Link From Youtube
 - /info : to Get Devs
 - /quote : To Get Anime Quotes
