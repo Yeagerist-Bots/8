@@ -1,8 +1,8 @@
 import os
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from helpers.filters import command
-from helpers.decorators import sudo_users_only, errors
+from helper.filters import command
+from helper.decorators import sudo_users_only, errors
 
 downloads = os.path.realpath("bot/downloads")
 raw = os.path.realpath(".")
