@@ -6,7 +6,7 @@ A Advanced Anime Theme VC Video Player created for playing vidio in the voice ch
 
 # Setting up
 1) Add this Bot to your Group and Make it Admin 
-2) Add @YuiVideoPlayer to your Group ;l'
+2) Add @YuiVideoPlayer to yourhb Group ;l'
 
 # Commands
 =>> Vidio Playing 🎧
